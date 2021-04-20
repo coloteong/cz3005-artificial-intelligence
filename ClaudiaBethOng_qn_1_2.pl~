@@ -1,0 +1,20 @@
+phonecompany(sumsum).
+phonecompany(appy).
+competitor(sumsum,appy).
+competitor(appy,sumsum).
+product(galactica-s3).
+develop(sumsum, galactica-s3).
+boss(stevey).
+steal(stevey, galactica-s3).
+rival(competitor-company,appy):-competitor(competitor-company,appy).
+
+unethical(boss_A):-
+    boss(boss_A),
+    product(x),
+    phonecompany(y),
+    develop(y,x),
+    rival(appy,y),
+    steal(boss_A, x).
+
+
+
